@@ -1,4 +1,4 @@
-package badidea_lol;
+package experiments.badideas;
 
 import java.util.Arrays;
 

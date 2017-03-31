@@ -1,3 +1,5 @@
+package model.abstractions;
+
 /**
  * Created by bgabonyi on 2017. 03. 30..
  */
