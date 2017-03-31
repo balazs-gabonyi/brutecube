@@ -23,7 +23,7 @@ public enum CubeEdge {
     private CubeVertex vertex1;
     private CubeVertex vertex2;
 
-    private CubeEdge(CubeVertex vertex1, CubeVertex vertex2) {
+    CubeEdge(CubeVertex vertex1, CubeVertex vertex2) {
         this.vertex1 = vertex1;
         this.vertex2 = vertex2;
     }
@@ -32,15 +32,8 @@ public enum CubeEdge {
         return vertex1;
     }
 
-    public void setVertex1(CubeVertex vertex1) {
-        this.vertex1 = vertex1;
-    }
-
     public CubeVertex getVertex2() {
         return vertex2;
     }
 
-    public void setVertex2(CubeVertex vertex2) {
-        this.vertex2 = vertex2;
-    }
 }
