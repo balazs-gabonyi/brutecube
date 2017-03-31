@@ -10,15 +10,15 @@ import java.util.List;
  */
 public class PermutationGenerator {
 
-    private static List<ArrayList<Integer>> permutations = new LinkedList<>();
+    private static final List<ArrayList<Integer>> PERMUTATIONS = new LinkedList<>();
 
-    private PermutationGenerator(){
+    private PermutationGenerator() {
         //hiding default constructor
     }
 
     public static List<ArrayList<Integer>> getPermutations(Integer[] array) {
         generatePermutations(array);
-        return permutations;
+        return PERMUTATIONS;
     }
 
     private static void generatePermutations(Integer[] array) {
@@ -29,7 +29,7 @@ public class PermutationGenerator {
         int current;
         if (start == end) {
             ArrayList<Integer> permutation = deepCopyList(Arrays.asList(array));
-            permutations.add(permutation);
+            PERMUTATIONS.add(permutation);
         } else {
             for (current = start; current <= end; current++) {
                 swap(array, start, current);
@@ -45,9 +45,9 @@ public class PermutationGenerator {
         array[position2] = temp;
     }
 
-    private static ArrayList<Integer> deepCopyList(List<Integer> source){
+    private static ArrayList<Integer> deepCopyList(List<Integer> source) {
         ArrayList<Integer> copy = new ArrayList<>();
-        source.forEach(copy::add);
+        copy.addAll(source);
         return copy;
     }
 }

@@ -9,7 +9,7 @@ import java.util.logging.Logger;
  */
 public class UniqueEdgeSumCubeGatherer {
 
-    private LinkedHashMap<Integer, NumberedCube> cubes = new LinkedHashMap<>();
+    private final LinkedHashMap<Integer, NumberedCube> cubes = new LinkedHashMap<>();
     private static final Logger LOGGER = Logger.getLogger(UniqueEdgeSumCubeGatherer.class.getName());
 
     public void offerCube(NumberedCube cube) {
@@ -20,7 +20,7 @@ public class UniqueEdgeSumCubeGatherer {
         getOrderedEdgeSums().forEach(sum -> LOGGER.info(cubes.get(sum).toString()));
     }
 
-    public ArrayList<Integer> getOrderedEdgeSums() {
+    private ArrayList<Integer> getOrderedEdgeSums() {
         ArrayList<Integer> orderedEdgeSums = new ArrayList<>();
         cubes.forEach((edgeSums, cube) -> orderedEdgeSums.add(edgeSums));
         orderedEdgeSums.sort(Integer::compareTo);

@@ -20,8 +20,8 @@ public enum CubeEdge {
     REAR_RIGHT(CubeVertex.REAR_TOP_RIGHT, CubeVertex.REAR_BOTTOM_RIGHT),
     REAR_BOTTOM(CubeVertex.REAR_BOTTOM_RIGHT, CubeVertex.REAR_BOTTOM_LEFT);
 
-    private CubeVertex vertex1;
-    private CubeVertex vertex2;
+    private final CubeVertex vertex1;
+    private final CubeVertex vertex2;
 
     CubeEdge(CubeVertex vertex1, CubeVertex vertex2) {
         this.vertex1 = vertex1;
