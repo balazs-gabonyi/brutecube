@@ -11,14 +11,14 @@ import java.util.List;
  */
 public class Cube {
 
-    private List<CubeVertex> vertices = Arrays.asList(CubeVertex.values());
-    private List<CubeEdge> edges = Arrays.asList(CubeEdge.values());
+    private CubeVertex[] vertices = CubeVertex.values();
+    private CubeEdge[] edges = CubeEdge.values();
 
-    public List<CubeVertex> getVertices() {
+    public CubeVertex[] getVertices() {
         return vertices;
     }
 
-    public List<CubeEdge> getEdges() {
+    public CubeEdge[] getEdges() {
         return edges;
     }
 

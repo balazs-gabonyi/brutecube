@@ -1,5 +1,6 @@
 package model.problem;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -9,9 +10,9 @@ import java.util.List;
  */
 public class PermutationGenerator {
 
-    private static List<List<Integer>> permutations = new LinkedList<>();
+    private static List<ArrayList<Integer>> permutations = new LinkedList<>();
 
-    public static List<List<Integer>> getPermutations(Integer[] array) {
+    public static List<ArrayList<Integer>> getPermutations(Integer[] array) {
         generatePermutations(array);
         return permutations;
     }
@@ -23,7 +24,7 @@ public class PermutationGenerator {
     private static void permute(Integer[] array, Integer start, Integer end) {
         int current;
         if (start == end) {
-            List<Integer> permutation = deepCopyList(Arrays.asList(array));
+            ArrayList<Integer> permutation = deepCopyList(Arrays.asList(array));
             permutations.add(permutation);
         } else {
             for (current = start; current <= end; current++) {
@@ -45,8 +46,8 @@ public class PermutationGenerator {
         System.out.println();
     }
 
-    private static List<Integer> deepCopyList(List<Integer> source){
-        List<Integer> copy = new LinkedList<>();
+    private static ArrayList<Integer> deepCopyList(List<Integer> source){
+        ArrayList<Integer> copy = new ArrayList<>();
         source.forEach(copy::add);
         return copy;
     }

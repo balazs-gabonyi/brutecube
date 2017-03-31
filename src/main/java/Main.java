@@ -1,5 +1,7 @@
+import model.problem.NumberedCubeValidator;
 import model.problem.PermutationGenerator;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -10,17 +12,14 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Integer[] numbers = new Integer[]{1, 2, 3, 4};
+        Integer[] permutationSource = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8};
 
-        List<List<Integer>> permutations = PermutationGenerator.getPermutations(numbers);
+        List<ArrayList<Integer>> permutations = PermutationGenerator.getPermutations(permutationSource);
 
-        List<Integer> randomList = new LinkedList<>(Arrays.asList(7,8,9));
-        permutations.add(randomList);
 
         System.out.println("PermutationLists:");
         permutations.forEach(permutation -> {
-            permutation.forEach(System.out::print);
-            System.out.println();
+            NumberedCubeValidator numberedCubeValidator = new NumberedCubeValidator(permutation);
         });
 
     }
