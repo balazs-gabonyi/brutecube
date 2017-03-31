@@ -16,10 +16,6 @@ public class UniqueEdgeSumCubeGatherer {
         cubes.put(cube.getUniqueEdgeCount(), cube);
     }
 
-    public void listUniqueCubes() {
-        cubes.forEach((edgeSums, cube) -> LOGGER.info(cube.toString()));
-    }
-
     public void listUniqueCubesInOrder() {
         getOrderedEdgeSums().forEach(sum -> LOGGER.info(cubes.get(sum).toString()));
     }

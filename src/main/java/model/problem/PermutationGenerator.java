@@ -12,6 +12,10 @@ public class PermutationGenerator {
 
     private static List<ArrayList<Integer>> permutations = new LinkedList<>();
 
+    private PermutationGenerator(){
+        //hiding default constructor
+    }
+
     public static List<ArrayList<Integer>> getPermutations(Integer[] array) {
         generatePermutations(array);
         return permutations;
@@ -39,11 +43,6 @@ public class PermutationGenerator {
         int temp = array[position1];
         array[position1] = array[position2];
         array[position2] = temp;
-    }
-
-    private static void printList(List<Integer> list) {
-        list.forEach(System.out::print);
-        System.out.println();
     }
 
     private static ArrayList<Integer> deepCopyList(List<Integer> source){
