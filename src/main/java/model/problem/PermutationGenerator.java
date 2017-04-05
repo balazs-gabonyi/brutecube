@@ -16,9 +16,9 @@ public class PermutationGenerator {
         //hiding default constructor
     }
 
-    public static List<ArrayList<Integer>> getNaturalNumbersPermutation(int upperLimit) {
-        Integer[] naturalNumbers = new Integer[upperLimit];
-        for (int i = 0; i < upperLimit; i++) {
+    public static List<ArrayList<Integer>> getNaturalNumbersPermutation(int upTo) {
+        Integer[] naturalNumbers = new Integer[upTo];
+        for (int i = 0; i < upTo; i++) {
             naturalNumbers[i] = i + 1;
         }
         return getPermutations(naturalNumbers);
