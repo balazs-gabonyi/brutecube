@@ -22,11 +22,11 @@ public class NumberedCube extends Cube {
     }
 
     public NumberedCube(ArrayList<Integer> permutation) {
-        setVerticesFromPermutation(permutation);
+        setVertexNumberingsFromPermutations(permutation);
         countUniqueSumEdges();
     }
 
-    private void setVerticesFromPermutation(ArrayList<Integer> permutation) {
+    private void setVertexNumberingsFromPermutations(ArrayList<Integer> permutation) {
         for (int i = 0; i < getVertices().length; i++) {
             numberedVertices.put(getVertices()[i], permutation.get(i));
         }
@@ -43,9 +43,7 @@ public class NumberedCube extends Cube {
     }
 
     private Integer getEdgeSum(CubeEdge edge) {
-        Integer vertex1Value = numberedVertices.get(edge.getVertex1());
-        Integer vertex2Value = numberedVertices.get(edge.getVertex2());
-        return vertex1Value + vertex2Value;
+        return numberedVertices.get(edge.getVertex1()) + numberedVertices.get(edge.getVertex2());
     }
 
     @Override

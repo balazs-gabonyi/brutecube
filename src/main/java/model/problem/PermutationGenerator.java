@@ -16,11 +16,19 @@ public class PermutationGenerator {
         //hiding default constructor
     }
 
+    public static List<ArrayList<Integer>> getNaturalNumbersPermutation(int upperLimit) {
+        Integer[] naturalNumbers = new Integer[upperLimit];
+        for (int i = 0; i < upperLimit; i++) {
+            naturalNumbers[i] = i + 1;
+        }
+        return getPermutations(naturalNumbers);
+    }
+
     public static List<ArrayList<Integer>> getPermutations(Integer[] array) {
         generatePermutations(array);
         return PERMUTATIONS;
     }
-
+    
     private static void generatePermutations(Integer[] array) {
         permute(array, 0, array.length - 1);
     }

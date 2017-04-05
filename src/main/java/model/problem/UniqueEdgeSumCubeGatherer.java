@@ -27,5 +27,4 @@ public class UniqueEdgeSumCubeGatherer {
         return orderedEdgeSums;
     }
 
-
 }
