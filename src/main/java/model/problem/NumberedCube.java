@@ -13,7 +13,6 @@ import java.util.Set;
  * Created by bgabonyi on 2017. 03. 31..
  */
 public class NumberedCube extends Cube {
-
     private final HashMap<CubeVertex, Integer> numberedVertices = new HashMap<>();
     private final Set<Integer> uniqueEdgeCounter = new LinkedHashSet<>();
 

@@ -8,7 +8,6 @@ import java.util.logging.Logger;
  * Created by bgabonyi on 2017. 03. 31..
  */
 public class UniqueEdgeSumCubeGatherer {
-
     private final LinkedHashMap<Integer, NumberedCube> cubes = new LinkedHashMap<>();
     private static final Logger LOGGER = Logger.getLogger(UniqueEdgeSumCubeGatherer.class.getName());
 

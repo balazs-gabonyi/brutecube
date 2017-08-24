@@ -4,7 +4,6 @@ package model.abstractions;
  * Created by bgabonyi on 2017. 03. 30..
  */
 public enum CubeEdge {
-
     FRONT_LEFT(CubeVertex.FRONT_BOTTOM_LEFT, CubeVertex.FRONT_TOP_LEFT),
     FRONT_TOP(CubeVertex.FRONT_TOP_LEFT, CubeVertex.FRONT_TOP_RIGHT),
     FRONT_RIGHT(CubeVertex.FRONT_TOP_RIGHT, CubeVertex.FRONT_BOTTOM_RIGHT),
