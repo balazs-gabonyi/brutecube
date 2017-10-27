@@ -14,7 +14,7 @@ import java.util.Set;
  */
 public class NumberedCube extends Cube {
     private final HashMap<CubeVertex, Integer> numberedVertices = new HashMap<>();
-    private final Set<Integer> uniqueEdgeCounter = new LinkedHashSet<>();
+    private final Set<Integer> uniqueEdgeSumCounter = new LinkedHashSet<>();
 
     private NumberedCube() {
         //hiding default constructor
@@ -32,12 +32,12 @@ public class NumberedCube extends Cube {
     }
 
     public Integer getUniqueEdgeCount() {
-        return uniqueEdgeCounter.size();
+        return uniqueEdgeSumCounter.size();
     }
 
     private void countUniqueSumEdges() {
         for (CubeEdge edge : getEdges()) {
-            uniqueEdgeCounter.add(getEdgeSum(edge));
+            uniqueEdgeSumCounter.add(getEdgeSum(edge));
         }
     }
 
